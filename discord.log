@@ -1,0 +1,49 @@
+2024-07-30 11:35:12,791:WARNING:discord.client: PyNaCl is not installed, voice will NOT be supported
+2024-07-30 11:35:12,823:INFO:discord.client: logging in using static token
+2024-07-30 11:35:13,784:INFO:discord.gateway: Shard ID None has connected to Gateway (Session ID: ca8f9952e69b7625c6e3165c61d8e1e8).
+2024-07-30 11:44:16,561:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "view_bugs" is not found
+2024-07-30 11:44:22,681:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "list_bugs" is not found
+2024-07-30 11:46:36,678:ERROR:discord.ext.commands.bot: Ignoring exception in command submit_bug
+Traceback (most recent call last):
+  File "C:\Users\lando\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\core.py", line 235, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lando\desktop\bugclenaer\cogs\bug_management.py", line 43, in submit_bug
+    await self.bot.bug_report_channel.send(f'New bug submitted by {ctx.author.mention}:\nID: {bug_id}, Description: {bug_description}, Priority: {priority}')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Bot' object has no attribute 'bug_report_channel'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\lando\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\bot.py", line 1366, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\lando\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\core.py", line 1029, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\lando\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\discord\ext\commands\core.py", line 244, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: AttributeError: 'Bot' object has no attribute 'bug_report_channel'
+2024-07-30 11:46:55,998:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "view_bugs" is not found
+2024-07-30 11:47:19,882:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "search_bugs" is not found
+2024-07-30 11:47:45,541:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "resolve_bug" is not found
+2024-07-30 11:48:06,809:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "comment_bug" is not found
+2024-07-30 11:48:24,911:INFO:discord.gateway: Shard ID None has successfully RESUMED session ca8f9952e69b7625c6e3165c61d8e1e8.
+2024-07-30 11:48:48,291:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "update_status" is not found
+2024-07-30 11:49:02,766:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "list_all_bugs" is not found
+2024-07-30 11:58:30,556:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "view_bugs" is not found
+2024-07-30 12:01:07,683:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "view_bugs" is not found
+2024-07-30 12:01:51,196:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "view_bug" is not found
+2024-07-30 12:01:57,383:ERROR:discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "view_bugs" is not found

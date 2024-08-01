@@ -65,5 +65,17 @@ class BugManagement(commands.Cog):
 
     # Define other commands...
 
+    @commands.command()
+    async def delete_bug(self, ctx, user: discord.User, bug_id: int):
+        user_id = str(user.id)
+        if user_id not in self.bug_data or len(self.bug_data[user_id]) < bug_id:
+            await ctx.send("Invalid bug ID.")
+            return
+        
+        del self.bug_data[user_id][bug_id - 1]
+        self.save_bug_data()
+        await ctx.send(f'Bug #{bug_id} by {ctx.author.mention} has been deleted.')
+
+
 async def setup(bot):
     await bot.add_cog(BugManagement(bot))

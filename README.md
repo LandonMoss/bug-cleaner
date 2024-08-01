@@ -18,6 +18,8 @@ The Bug Bounty Discord Bot is a tool designed to manage bug reports within a Dis
 - **Edit Bug Description**: Users can update the description of a bug they have submitted.
 - **Reopen Bug**: Users can reopen a bug they have previously closed.
 - **List Assigned Bugs**: Users can list all bugs assigned to them.
+- - **Delete Bug**: Administrators can delete specific bug reports.
+
 
 ## Setup
 

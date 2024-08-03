@@ -1,27 +1,28 @@
 import discord
 from discord.ext import commands
 import asyncio
-import os
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+from config import config  # Ensure this import is correct
 
 # Bot setup
 intents = discord.Intents.default()
-intents.messages = True  # Enable message intents
-intents.message_content = True  # Enable message content intents
+intents.messages = True
+intents.message_content = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-# Load cogs
-async def load_cogs():
-    await bot.load_extension('cogs.bug_management')
-
 async def main():
+    # Load extensions
     await load_cogs()
-    await bot.start(TOKEN)
+    # Start bot
+    await bot.start(config['token'])
 
-if __name__ == "__main__":
-    asyncio.run(main())
+async def load_cogs():
+    for cog in config['cogs']:
+        await bot.load_extension(cog)
+
+@bot.event
+async def on_ready():
+    print(f'We have logged in as {bot.user}')
+    bot.bug_report_channel = discord.utils.get(bot.get_all_channels(), name='bug-reports')
+
+asyncio.run(main())

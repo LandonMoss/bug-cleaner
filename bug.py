@@ -18,7 +18,7 @@ async def main():
 
 async def load_cogs():
     for cog in config['cogs']:
-        await bot.load_extension(cog)
+        await bot.load_extension(cog) #Load each cog
 
 @bot.event
 async def on_ready():

@@ -39,7 +39,6 @@ class Database:
         self.cursor.execute('UPDATE bugs SET rewarded = ? WHERE id = ?', (True, bug_id))
         self.conn.commit()
 
-
     def delete_bug(self, bug_id):
         self.cursor.execute('DELETE FROM bugs WHERE id = ?', (bug_id,))
         self.conn.commit()

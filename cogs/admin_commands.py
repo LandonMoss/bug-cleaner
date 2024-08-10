@@ -40,7 +40,7 @@ class AdminCommands(commands.Cog):
     async def list_all_bugs(self, ctx):
         if not self.bug_data: #Check if there is not bugs submitted
             await ctx.send('No bugs have been submitted.')
-            return
+            return                          
 
         all_bugs = '' #Initialize a string to store all bugs
         for user_id, bugs in self.bug_data.items(): #Iterate through the bug data

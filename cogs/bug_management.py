@@ -103,6 +103,8 @@ class BugManagement(commands.Cog):
                    f"Open Bugs: {open_bugs}\n"
                    f"In Progress Bugs: {in_progress_bugs}\n"
                    f"Closed Bugs: {closed_bugs}")
+        
+    
 
-async def setup(bot):
+async def setup(bot):   
     await bot.add_cog(BugManagement(bot))
